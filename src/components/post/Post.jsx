@@ -2,7 +2,7 @@ import "./post.css";
 import { Link } from "react-router-dom";
 
 export default function Post({ post }) {
-  const PF = "https://blog-website-reactjs.herokuapp.com/images/";
+  const PF = `${process.env.REACT_APP_BASEURL}/images`
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}

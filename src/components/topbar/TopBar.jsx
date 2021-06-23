@@ -5,7 +5,7 @@ import "./topbar.css";
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "https://blog-website-reactjs.herokuapp.com/images/"
+  const PF = `${process.env.REACT_APP_BASEURL}/images/`
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
